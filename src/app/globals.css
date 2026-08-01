@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --surface: #f7f4f2;
+  --surface-elevated: #fffcfb;
+  --mist: #efe6e4;
+  --ink: #1a1012;
+  --ink-soft: #5c4a4e;
+  --night: #2a0f14;
+  --night-elevated: #3a151c;
+  --accent: #9e1d2e;
+  --accent-soft: #f3dde1;
+  --accent-warm: #c45c6a;
+  --blossom: #e8b7bf;
+  --line: rgba(26, 16, 18, 0.1);
+  --line-on-dark: rgba(255, 252, 251, 0.14);
+  --background: var(--surface);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-mist: var(--mist);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-night: var(--night);
+  --color-night-elevated: var(--night-elevated);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-warm: var(--accent-warm);
+  --color-blossom: var(--blossom);
+  --color-line: var(--line);
+  --color-line-on-dark: var(--line-on-dark);
+  --color-cream: var(--surface);
+  --color-sage: var(--accent-warm);
+  --color-sage-deep: var(--accent);
+  --color-accent-muted: var(--accent-warm);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .marquee-track {
+      animation: none !important;
+    }
+  }
+
+  body {
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--accent) 28%, white);
+    color: var(--ink);
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-display), ui-serif, Georgia, "Times New Roman", serif;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility marquee-track {
+  animation: marquee 34s linear infinite;
+}
