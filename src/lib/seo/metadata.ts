@@ -95,10 +95,10 @@ export function buildRootMetadata(): Metadata {
 
 export const rootViewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#9e1d2e" },
-    { media: "(prefers-color-scheme: dark)", color: "#2a0f14" },
+    { media: "(prefers-color-scheme: light)", color: "#0958a7" },
+    { media: "(prefers-color-scheme: dark)", color: "#002a56" },
   ],
   width: "device-width",
   initialScale: 1,
-  colorScheme: "light",
+  colorScheme: "dark",
 };

@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "optimize:portrait": "node scripts/optimize-portrait.js",
+    "process:portrait": "node scripts/process-portrait.js",
+    "cutout:portrait": "node scripts/cutout-portrait.js",
     "generate:icons": "node scripts/generate-icons.js"
   },
   "dependencies": {
@@ -19,6 +21,7 @@
     "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
+    "@imgly/background-removal-node": "^1.4.5",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

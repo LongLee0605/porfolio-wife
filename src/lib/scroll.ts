@@ -1,5 +1,5 @@
 export function scrollToId(id: string, behavior: ScrollBehavior = "smooth") {
-  if (id === "top") {
+  if (id === "top" || id === "main-content") {
     window.scrollTo({ top: 0, behavior });
     return;
   }
@@ -7,10 +7,7 @@ export function scrollToId(id: string, behavior: ScrollBehavior = "smooth") {
   const target = document.getElementById(id);
   if (!target) return;
 
-  const header = document.querySelector("header");
-  const offset = header instanceof HTMLElement ? header.offsetHeight + 8 : 80;
-  const top = target.getBoundingClientRect().top + window.scrollY - offset;
-
+  const top = target.getBoundingClientRect().top + window.scrollY - 16;
   window.scrollTo({ top: Math.max(0, top), behavior });
 }
 

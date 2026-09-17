@@ -6,24 +6,24 @@ const iconDir = path.join("public", "icons");
 const appDir = path.join("src", "app");
 
 /**
- * Brand mark: VT monogram (Trang Van) on burgundy.
- * Geometric serif-inspired letterforms — crisp at 16px.
+ * Brand mark: VT monogram (Trang Van) on gentle sea blue.
+ * Geometric letterforms — crisp at 16px.
  */
 const markSvg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="VT">
   <defs>
     <linearGradient id="bg" x1="12" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#B4283A"/>
-      <stop offset="1" stop-color="#7A1522"/>
+      <stop stop-color="#4FA3C0"/>
+      <stop offset="1" stop-color="#2A6F88"/>
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="14" fill="url(#bg)"/>
-  <circle cx="52" cy="12" r="18" fill="#E8B7BF" fill-opacity="0.2"/>
+  <circle cx="52" cy="12" r="18" fill="#9ECFE0" fill-opacity="0.28"/>
   <!-- V -->
-  <path fill="#FFFCFB" d="M11.5 17.25c0-.69.56-1.25 1.25-1.25h3.1c.52 0 .98.32 1.16.8L22.4 33.1l5.35-16.3a1.25 1.25 0 0 1 1.17-.8h3.05c.9 0 1.5.92 1.14 1.75L25.3 45.1a1.75 1.75 0 0 1-3.25 0L11.61 18.75a1.25 1.25 0 0 1-.11-1.5Z"/>
+  <path fill="#FBFCFD" d="M11.5 17.25c0-.69.56-1.25 1.25-1.25h3.1c.52 0 .98.32 1.16.8L22.4 33.1l5.35-16.3a1.25 1.25 0 0 1 1.17-.8h3.05c.9 0 1.5.92 1.14 1.75L25.3 45.1a1.75 1.75 0 0 1-3.25 0L11.61 18.75a1.25 1.25 0 0 1-.11-1.5Z"/>
   <!-- T -->
-  <path fill="#FFFCFB" d="M34.25 16c-.69 0-1.25.56-1.25 1.25v2.1c0 .69.56 1.25 1.25 1.25H40.5v23.15c0 .69.56 1.25 1.25 1.25h2.5c.69 0 1.25-.56 1.25-1.25V20.6h6.25c.69 0 1.25-.56 1.25-1.25v-2.1c0-.69-.56-1.25-1.25-1.25H34.25Z"/>
-  <circle cx="48.5" cy="46.5" r="2.25" fill="#E8B7BF"/>
+  <path fill="#FBFCFD" d="M34.25 16c-.69 0-1.25.56-1.25 1.25v2.1c0 .69.56 1.25 1.25 1.25H40.5v23.15c0 .69.56 1.25 1.25 1.25h2.5c.69 0 1.25-.56 1.25-1.25V20.6h6.25c.69 0 1.25-.56 1.25-1.25v-2.1c0-.69-.56-1.25-1.25-1.25H34.25Z"/>
+  <circle cx="48.5" cy="46.5" r="2.25" fill="#9ECFE0"/>
 </svg>`;
 
 async function raster(size, filePath) {
@@ -48,7 +48,7 @@ async function rasterMaskable(size, filePath) {
       width: size,
       height: size,
       channels: 4,
-      background: { r: 158, g: 29, b: 46, alpha: 1 },
+      background: { r: 61, g: 143, b: 173, alpha: 1 },
     },
   })
     .composite([{ input: innerBuf, left: pad, top: pad }])
@@ -59,7 +59,6 @@ async function rasterMaskable(size, filePath) {
 async function run() {
   fs.mkdirSync(iconDir, { recursive: true });
 
-  // Remove leftover portrait-crop icons
   for (const stale of ["icon-32.png"]) {
     const p = path.join(iconDir, stale);
     if (fs.existsSync(p)) fs.unlinkSync(p);

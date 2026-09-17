@@ -45,46 +45,26 @@ export function About() {
           </FadeIn>
         </div>
 
-        <div className="mt-12 grid gap-5 border-t border-line pt-10 sm:mt-14 sm:pt-12 lg:grid-cols-[1.2fr_0.8fr]">
-          <FadeIn delay={0.08}>
-            <div className="relative overflow-hidden rounded-2xl bg-night p-6 text-surface-elevated sm:p-9">
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -right-12 top-0 h-40 w-40 rounded-full bg-accent/35 blur-3xl"
-              />
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blossom">
-                Education
-              </p>
-              <p className="mt-4 max-w-lg font-display text-2xl font-semibold leading-tight tracking-tight sm:text-3xl">
-                {profile.education.degree}
-              </p>
-              <Text className="mt-4 text-white/70">
-                {profile.education.school}
-              </Text>
-              <p className="mt-2 text-sm text-white/45">
-                {profile.education.period} · {profile.education.gpa}
-              </p>
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={0.16}>
-            <div className="h-full rounded-2xl border border-line bg-mist/60 p-6 sm:p-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-soft/70">
-                Campus & leadership
-              </p>
-              <ul className="mt-5 space-y-5">
-                {profile.activities.map((activity) => (
-                  <li key={activity.organization}>
-                    <p className="font-semibold text-ink">{activity.role}</p>
-                    <Text size="sm" tone="muted" className="mt-1">
-                      {activity.organization} · {activity.period}
-                    </Text>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </FadeIn>
-        </div>
+        <FadeIn delay={0.08} className="mt-12 sm:mt-14">
+          <div className="relative overflow-hidden rounded-2xl bg-night p-6 text-surface-elevated sm:p-9">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -right-12 top-0 h-40 w-40 rounded-full bg-accent/35 blur-3xl"
+            />
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blossom">
+              Education
+            </p>
+            <p className="mt-4 max-w-2xl font-display text-2xl font-semibold leading-tight tracking-tight sm:text-3xl">
+              {profile.education.degree}
+            </p>
+            <Text className="mt-4 text-white/70">
+              {profile.education.school}
+            </Text>
+            <p className="mt-2 text-sm text-white/45">
+              {profile.education.period} · {profile.education.gpa}
+            </p>
+          </div>
+        </FadeIn>
       </Container>
     </section>
   );

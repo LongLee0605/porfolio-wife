@@ -136,7 +136,7 @@ export function Header() {
             className={cn(
               "inline-flex h-10 items-center rounded-md px-4 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0",
               solid
-                ? "bg-accent text-surface-elevated shadow-[0_8px_18px_rgba(158,29,46,0.25)] hover:bg-night"
+                ? "bg-accent text-surface-elevated shadow-[0_8px_18px_rgba(61,143,173,0.28)] hover:bg-night"
                 : "bg-surface-elevated text-night shadow-[0_8px_18px_rgba(0,0,0,0.15)] hover:bg-blossom",
             )}
           >

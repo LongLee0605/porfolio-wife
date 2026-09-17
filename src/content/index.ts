@@ -3,7 +3,6 @@ export {
   getCurrentEmployers,
   profile,
   type AboutHighlight,
-  type Activity,
   type Certificate,
   type Education,
   type ExperienceRole,

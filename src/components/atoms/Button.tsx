@@ -10,7 +10,7 @@ type ButtonProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 
 const variants = {
   primary:
-    "bg-accent text-surface-elevated shadow-[0_8px_20px_rgba(158,29,46,0.22)] hover:bg-night hover:shadow-[0_12px_28px_rgba(42,15,20,0.28)] active:bg-night/90",
+    "bg-accent text-surface-elevated shadow-[0_8px_20px_rgba(61,143,173,0.28)] hover:bg-night hover:shadow-[0_12px_28px_rgba(15,44,58,0.28)] active:bg-night/90",
   secondary:
     "border border-line bg-surface-elevated/90 text-ink hover:border-accent/45 hover:bg-accent-soft hover:text-accent active:bg-accent-soft/80",
   ghost:

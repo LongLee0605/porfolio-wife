@@ -34,12 +34,6 @@ export type Language = {
   highlight?: string;
 };
 
-export type Activity = {
-  role: string;
-  organization: string;
-  period: string;
-};
-
 export type Certificate = {
   name: string;
   year?: string;
@@ -60,13 +54,14 @@ export const profile = {
   shortName: "Trang Van",
   username: "trangvan15",
   title: "HR Executive",
+  roles: ["HR Executive", "Talent Acquisition", "People Partner"],
   location: "Ho Chi Minh City, Vietnam",
   locationCity: "Ho Chi Minh City",
   locationCountry: "VN",
   tagline:
     "Building people-first workplaces through recruitment excellence, thoughtful HR operations, and meaningful employee experience.",
   objective:
-    "Seeking a professional office role where HR expertise is valued and can meaningfully benefit the organization — with a focus on the HR department.",
+    "I am a motivated and versatile HR professional, always eager to take on new challenges. With a passion for people and process excellence, I am dedicated to delivering high-quality hiring and employee experience results.",
   /** Shared by hero ticker, keywords, and Person JSON-LD knowsAbout. */
   focusAreas: [
     "Talent Acquisition",
@@ -87,12 +82,40 @@ export const profile = {
     linkedinLabel: "linkedin.com/in/trangvan15",
   },
   nav: [
-    { id: "about", label: "About", href: "#about" },
+    { id: "overview", label: "Overview", href: "#overview" },
     { id: "experience", label: "Experience", href: "#experience" },
     { id: "expertise", label: "Expertise", href: "#expertise" },
     { id: "skills", label: "Skills", href: "#skills" },
     { id: "contact", label: "Contact", href: "#contact" },
   ] as NavItem[],
+  skillGroups: [
+    {
+      title: "Core HR",
+      items: [
+        "Recruitment",
+        "Talent Acquisition",
+        "Onboarding",
+        "HR Operations",
+        "Employee Relations",
+        "Labor Contracts",
+        "Employer Branding",
+        "L&D",
+      ],
+    },
+    {
+      title: "Tools & Soft Skills",
+      items: [
+        "Microsoft Office",
+        "Outlook",
+        "Canva",
+        "Mailchimp",
+        "Leadership",
+        "Communication",
+        "Presentation",
+        "Research & Writing",
+      ],
+    },
+  ],
   education: {
     school: "University of Economics Ho Chi Minh City (UEH)",
     degree: "Bachelor of Human Resource Management",
@@ -227,18 +250,6 @@ export const profile = {
     "Communication & Presentation",
     "Research & Writing",
   ],
-  activities: [
-    {
-      role: "Vice head of External Relations Department",
-      organization: "HuReA Club",
-      period: "Dec 2020 – Nov 2022",
-    },
-    {
-      role: "Member of Human Resources Department",
-      organization: "Travelgroup UEH",
-      period: "May 2021 – Oct 2022",
-    },
-  ] as Activity[],
   recruitmentDomains: {
     gleads: [
       "Technology: Front-end, Back-end, DevOps, Network, QC, Business Analyst",

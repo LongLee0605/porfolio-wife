@@ -17,29 +17,34 @@ export function Hero() {
     <section
       id="top"
       aria-label="Introduction"
-      className="relative isolate min-h-[100svh] overflow-hidden"
+      className="relative isolate min-h-[100svh] overflow-hidden bg-sea-atmosphere"
     >
-      <div className="absolute inset-0 -z-10">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-20 bg-[radial-gradient(ellipse_at_70%_40%,rgba(158,207,224,0.22),transparent_55%)]"
+      />
+
+      <motion.div
+        className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 mx-auto h-[72%] max-w-5xl sm:h-[78%] sm:max-w-none lg:inset-y-0 lg:right-0 lg:left-auto lg:h-full lg:w-[54%]"
+        initial={reduce ? false : { opacity: 0, x: 36 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+      >
         <Image
           src={siteConfig.images.portrait}
           alt={siteConfig.images.alt}
           fill
           priority
-          quality={85}
-          sizes="100vw"
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBUQEBAVFRUVFRUVFRUVFRUWFxUXFhUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0lHyUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAAEAAQMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAFBgAEBwIDAf/EADkQAAIBAgQDBgQFAwUAAAAAAAECAwQRAAUSITEGQVFhEyJxMoGRoQcjQlLB0fAVYnLxFjOCkv/EABkBAAMBAQEAAAAAAAAAAAAAAAECAwQABf/EACIRAAICAQQCAwEAAAAAAAAAAAABAhEDBBIhMQVBEyJRYf/aAAwDAQACEQMRAD8A7jRRRQBRRRQBRRRQBRRRQBRRRQH/2Q=="
-          className="object-cover object-[center_18%] sm:object-[center_15%] lg:object-[72%_12%] [image-rendering:auto] contrast-[1.04] saturate-[1.05]"
+          quality={88}
+          sizes="(max-width: 1024px) 90vw, 54vw"
+          className="object-contain object-bottom drop-shadow-[0_24px_60px_rgba(15,44,58,0.28)] lg:object-[center_bottom]"
         />
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-gradient-to-b from-night/65 via-night/40 to-night/75 sm:from-night/60 sm:via-night/32 sm:to-night/70 lg:bg-gradient-to-r lg:from-night/82 lg:via-night/40 lg:to-night/10"
-        />
-        <div
-          aria-hidden
-          className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-night/85 to-transparent lg:hidden"
-        />
-      </div>
+      </motion.div>
+
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-[5] bg-gradient-to-t from-night/70 via-night/20 to-night/35 sm:via-night/10 lg:bg-gradient-to-r lg:from-night/78 lg:via-night/40 lg:to-transparent"
+      />
 
       <Container className="relative flex min-h-[100svh] flex-col justify-end pb-28 pt-28 sm:justify-center sm:pb-32 sm:pt-28 lg:justify-center lg:pb-24">
         <div className="max-w-xl lg:max-w-2xl">
