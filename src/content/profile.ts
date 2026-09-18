@@ -135,14 +135,9 @@ export const profile = {
       period: "Mar 2026 – Present",
       startDate: "2026-03",
       highlights: [
-        "Recruitment: Manage the full recruitment lifecycle for corporate and frontline roles, including sourcing, assessment, offer management, onboarding, and post-joining follow-up.",
-        "Build and maintain talent pipelines through direct sourcing, recruitment platforms, professional networks, and agency partnerships. Manage onboarding and offboarding processes and clearance.",
-        "C&B: Manage monthly payroll and attendance in compliance with statutory requirements. Administer SI/HI/UI increases, decreases, and status changes.",
-        "Handle PIT administration, including dependent registration, documentation, and employee inquiries, while ensuring benefits are delivered in accordance with company policies and employment contracts.",
-        "Manage the employee health insurance program, including vendor coordination, contract negotiation, enrollment, claims support, and ongoing administration.",
-        "L&D: Coordinate training needs assessments, annual training plans, workshops, orientations, participation tracking, and management reports.",
-        "Engagement & Culture: Organize employee engagement activities and company events, conduct surveys, and follow up on action plans to enhance employee experience.",
-        "HR Operations & Compliance: Prepare HR reports and ensure compliance with labor regulations, employment contracts, employee records, and statutory requirements. Coordinate with relevant authorities on HR-related matters.",
+        "Lead recruitment for corporate and frontline roles across the full hiring cycle.",
+        "Own C&B operations covering payroll, attendance, insurance, and PIT.",
+        "Support L&D, engagement & culture, and day-to-day HR operations & compliance.",
       ],
     },
     {
@@ -152,13 +147,9 @@ export const profile = {
       startDate: "2023-06",
       endDate: "2026-03",
       highlights: [
-        "Own end-to-end recruitment across Technology, Marketing, and HR–Accounting roles for Gleads.",
-        "Recruit for Customer Service, Legal, and Accounting functions including international and consulting roles for BBCIncorp.",
-        "Partner with hiring managers to clarify needs, source creatively, and deliver high-quality hires with speed.",
-        "Manage onboarding/offboarding, labor contracts, and day-to-day HR operations with compliance focus.",
-        "Support employer branding and maintain pipeline integrity with data-driven stakeholder updates.",
-        "Strengthen employee relations through feedback systems, engagement planning, and internal communications.",
-        "Cover multi-entity hiring across Technology, Marketing, Legal, Customer Service, HR, and Accounting domains.",
+        "Ran end-to-end recruitment for Gleads (Tech, Marketing, HR–Accounting) and BBCIncorp (Customer Service, Legal, Accounting).",
+        "Managed onboarding/offboarding, labor contracts, and multi-entity HR operations.",
+        "Supported employer branding, employee relations, and hiring-manager partnerships.",
       ],
     },
     {
@@ -240,24 +231,85 @@ export const profile = {
   ],
   workDomains: {
     imcd: [
-      "Recruitment: Manage the full recruitment lifecycle for corporate and frontline roles, including sourcing, assessment, offer management, onboarding, and post-joining follow-up.",
-      "Build and maintain talent pipelines through direct sourcing, recruitment platforms, professional networks, and agency partnerships. Manage onboarding and offboarding processes and clearance.",
-      "C&B: Manage monthly payroll and attendance in compliance with statutory requirements. Administer SI/HI/UI increases, decreases, and status changes.",
-      "Handle PIT administration, including dependent registration, documentation, and employee inquiries, while ensuring benefits are delivered in accordance with company policies and employment contracts.",
-      "Manage the employee health insurance program, including vendor coordination, contract negotiation, enrollment, claims support, and ongoing administration.",
-      "L&D: Coordinate training needs assessments, annual training plans, workshops, orientations, participation tracking, and management reports.",
-      "Engagement & Culture: Organize employee engagement activities and company events, conduct surveys, and follow up on action plans to enhance employee experience.",
-      "HR Operations & Compliance: Prepare HR reports and ensure compliance with labor regulations, employment contracts, employee records, and statutory requirements. Coordinate with relevant authorities on HR-related matters.",
+      {
+        label: "Recruitment",
+        details: [
+          "Manage the full recruitment lifecycle for corporate and frontline roles, including sourcing, assessment, offer management, onboarding, and post-joining follow-up.",
+          "Build and maintain talent pipelines through direct sourcing, recruitment platforms, professional networks, and agency partnerships. Manage onboarding and offboarding processes and clearance.",
+        ],
+      },
+      {
+        label: "C&B",
+        details: [
+          "Manage monthly payroll and attendance in compliance with statutory requirements. Administer SI/HI/UI increases, decreases, and status changes.",
+          "Handle PIT administration, including dependent registration, documentation, and employee inquiries, while ensuring benefits are delivered in accordance with company policies and employment contracts.",
+          "Manage the employee health insurance program, including vendor coordination, contract negotiation, enrollment, claims support, and ongoing administration.",
+        ],
+      },
+      {
+        label: "L&D",
+        details: [
+          "Coordinate training needs assessments, annual training plans, workshops, orientations, participation tracking, and management reports.",
+        ],
+      },
+      {
+        label: "Engagement & Culture",
+        details: [
+          "Organize employee engagement activities and company events, conduct surveys, and follow up on action plans to enhance employee experience.",
+        ],
+      },
+      {
+        label: "HR Operations & Compliance",
+        details: [
+          "Prepare HR reports and ensure compliance with labor regulations, employment contracts, employee records, and statutory requirements. Coordinate with relevant authorities on HR-related matters.",
+        ],
+      },
     ],
     gleadsBbc: [
-      "Technology: Front-end, Back-end, DevOps, Network, QC, Business Analyst",
-      "Marketing: Brand, Content, Account, Design (Graphic, UI/UX), SEO",
-      "HR & Accounting: HR Executive, HR Admin, Accountant",
-      "Customer Service: Sales Executive, Sales Admin",
-      "Legal: Legal Executive, Compliance Officer",
-      "Accounting: International Accountant, Bookkeeping Leader, Accounting Consultant",
-      "Multi-entity HR support across Gleads VietNam and BBCIncorp JSC (parent–subsidiary)",
+      {
+        label: "Technology",
+        roles: [
+          "Front-end",
+          "Back-end",
+          "DevOps",
+          "Network",
+          "QC",
+          "Business Analyst",
+        ],
+      },
+      {
+        label: "Marketing",
+        roles: [
+          "Brand",
+          "Content",
+          "Account",
+          "Design (Graphic, UI/UX)",
+          "SEO",
+        ],
+      },
+      {
+        label: "HR & Accounting",
+        roles: ["HR Executive", "HR Admin", "Accountant"],
+      },
+      {
+        label: "Customer Service",
+        roles: ["Sales Executive", "Sales Admin"],
+      },
+      {
+        label: "Legal",
+        roles: ["Legal Executive", "Compliance Officer"],
+      },
+      {
+        label: "Accounting",
+        roles: [
+          "International Accountant",
+          "Bookkeeping Leader",
+          "Accounting Consultant",
+        ],
+      },
     ],
+    gleadsBbcNote:
+      "Multi-entity HR support across Gleads VietNam and BBCIncorp JSC (parent–subsidiary)",
   },
 } as const;
 

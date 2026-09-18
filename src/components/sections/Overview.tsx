@@ -62,7 +62,7 @@ export function Overview() {
 
             <div className="card-glow flex h-full min-w-0 flex-col rounded-2xl p-5 text-left sm:p-6">
               <p className="text-[11px] font-semibold uppercase tracking-wider text-blossom">
-                Current roles
+                Current role
               </p>
               <ul className="mt-3 flex flex-1 flex-col justify-center gap-4">
                 {roles.map((role) => (
