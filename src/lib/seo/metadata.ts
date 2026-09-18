@@ -10,6 +10,14 @@ export function buildRootMetadata(): Metadata {
     type: "image/jpeg" as const,
   };
 
+  const portraitImage = {
+    url: absoluteUrl(siteConfig.images.portrait),
+    width: siteConfig.images.width,
+    height: siteConfig.images.height,
+    alt: siteConfig.images.alt,
+    type: "image/png" as const,
+  };
+
   return {
     metadataBase: new URL(siteConfig.url),
     title: {
@@ -33,7 +41,6 @@ export function buildRootMetadata(): Metadata {
     },
     icons: {
       icon: [
-        { url: siteConfig.icons.svg, type: "image/svg+xml" },
         { url: siteConfig.icons.favicon16, sizes: "16x16", type: "image/png" },
         { url: siteConfig.icons.favicon32, sizes: "32x32", type: "image/png" },
         { url: siteConfig.icons.icon192, sizes: "192x192", type: "image/png" },
@@ -53,22 +60,13 @@ export function buildRootMetadata(): Metadata {
       firstName: siteConfig.firstName,
       lastName: siteConfig.lastName,
       username: siteConfig.username,
-      images: [
-        ogImage,
-        {
-          url: absoluteUrl(siteConfig.images.portraitFallback),
-          width: siteConfig.images.width,
-          height: siteConfig.images.height,
-          alt: siteConfig.images.alt,
-          type: "image/jpeg",
-        },
-      ],
+      images: [ogImage, portraitImage],
     },
     twitter: {
       card: "summary_large_image",
       title: siteConfig.title,
       description: siteConfig.description,
-      images: [ogImage],
+      images: [ogImage.url],
     },
     robots: {
       index: true,

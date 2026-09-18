@@ -65,9 +65,6 @@ export function TypeWriter({ words, className }: TypeWriterProps) {
   return (
     <span className={cn("text-accent", className)} aria-live="polite">
       {text}
-      <span className="ml-0.5 inline-block animate-pulse" aria-hidden>
-        |
-      </span>
     </span>
   );
 }

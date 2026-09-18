@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
       images: [
         absoluteUrl(siteConfig.images.og),
-        absoluteUrl(siteConfig.images.portraitFallback),
+        absoluteUrl(siteConfig.images.portrait),
       ],
     },
   ];

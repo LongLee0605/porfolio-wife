@@ -21,7 +21,6 @@ type AvatarBgAnimationProps = {
   className?: string;
 };
 
-/** Orbital SVG backdrop behind the portrait — adapted from D.Long Portfolio. */
 export function AvatarBgAnimation({ className }: AvatarBgAnimationProps) {
   const uid = useId().replace(/:/g, "");
   const reduceMotion = useSyncExternalStore(

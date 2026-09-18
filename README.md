@@ -1,22 +1,45 @@
 # Van Thien Doan Trang — Portfolio
 
-Next.js portfolio for HR Executive **Van Thien Doan Trang**, built with App Router, Atomic Design, and SEO metadata.
+Next.js portfolio for HR Executive **Van Thien Doan Trang**, with App Router and SEO metadata.
 
 ## Stack
 
 - Next.js (App Router) + TypeScript
 - Tailwind CSS v4
 - Framer Motion
-- Atomic Design (`atoms` → `molecules` → `organisms` → `templates`)
+
+## Structure
+
+```text
+src/
+  app/           # routes, globals, icons
+  components/
+    ui/          # FadeIn, TypeWriter, BackToTop, AvatarBgAnimation
+    layout/      # Sidebar, Footer, PortfolioShell
+    sections/    # Overview, Experience, Expertise, Skills, Contact
+    seo/         # JsonLd
+  content/       # profile data
+  lib/seo/       # site config, metadata, JSON-LD
+public/
+  images/        # portrait.png, og.jpg
+  icons/         # favicon + PWA icons (from portrait)
+```
 
 ## Getting started
 
 ```bash
 npm install
+npm run generate:assets
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+Regenerate favicons / OG from the portrait:
+
+```bash
+npm run generate:assets
+```
 
 ## SEO
 

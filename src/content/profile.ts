@@ -30,7 +30,6 @@ export type Education = {
 export type Language = {
   name: string;
   detail: string;
-  /** Short label for About highlights (omit for native / UI-only). */
   highlight?: string;
 };
 
@@ -49,7 +48,6 @@ export const profile = {
   name: "Van Thien Doan Trang",
   firstName: "Van Thien Doan",
   lastName: "Trang",
-  /** Visual line break for the hero H1. */
   nameLines: ["Van Thien", "Doan Trang"] as const,
   shortName: "Trang Van",
   username: "trangvan15",
@@ -62,7 +60,6 @@ export const profile = {
     "Building people-first workplaces through recruitment excellence, thoughtful HR operations, and meaningful employee experience.",
   objective:
     "I am a motivated and versatile HR professional, always eager to take on new challenges. With a passion for people and process excellence, I am dedicated to delivering high-quality hiring and employee experience results.",
-  /** Shared by hero ticker, keywords, and Person JSON-LD knowsAbout. */
   focusAreas: [
     "Talent Acquisition",
     "Full-cycle Recruitment",
@@ -266,21 +263,12 @@ export const profile = {
 
 export type Profile = typeof profile;
 
-/** About section stats — derived from profile to avoid content drift. */
 export function getAboutHighlights(): AboutHighlight[] {
-  const languageHighlights = profile.languages
-    .filter((language): language is Language & { highlight: string } =>
-      Boolean(language.highlight),
-    )
-    .map((language) => ({
-      label: language.name,
-      value: language.highlight,
-    }));
-
   return [
-    { label: "Professional focus", value: profile.title },
-    ...languageHighlights,
-    { label: "Education", value: profile.education.gpaShort },
+    { label: "Based in", value: profile.locationCity },
+    { label: "Experience", value: "3+ years HR" },
+    { label: "Core strength", value: "Full-cycle hiring" },
+    { label: "Industries", value: "Tech · Legal · MKT" },
   ];
 }
 

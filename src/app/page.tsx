@@ -1,5 +1,5 @@
-import { PortfolioLayout } from "@/components/templates/PortfolioLayout";
+import { PortfolioShell } from "@/components/layout/PortfolioShell";
 
 export default function HomePage() {
-  return <PortfolioLayout />;
+  return <PortfolioShell />;
 }

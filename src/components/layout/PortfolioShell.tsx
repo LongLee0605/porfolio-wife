@@ -1,13 +1,13 @@
-import { BackToTop } from "@/components/atoms/BackToTop";
-import { Contact } from "@/components/organisms/Contact";
-import { Experience } from "@/components/organisms/Experience";
-import { Expertise } from "@/components/organisms/Expertise";
-import { Footer } from "@/components/organisms/Footer";
-import { Overview } from "@/components/organisms/Overview";
-import { Sidebar } from "@/components/organisms/Sidebar";
-import { Skills } from "@/components/organisms/Skills";
+import { BackToTop } from "@/components/ui/BackToTop";
+import { Footer } from "@/components/layout/Footer";
+import { Sidebar } from "@/components/layout/Sidebar";
+import { Contact } from "@/components/sections/Contact";
+import { Experience } from "@/components/sections/Experience";
+import { Expertise } from "@/components/sections/Expertise";
+import { Overview } from "@/components/sections/Overview";
+import { Skills } from "@/components/sections/Skills";
 
-export function PortfolioLayout() {
+export function PortfolioShell() {
   return (
     <div className="relative mx-auto flex w-full max-w-[1920px] flex-col lg:flex-row">
       <a

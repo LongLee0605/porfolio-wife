@@ -59,8 +59,8 @@ export function buildPersonJsonLd(): JsonLdObject {
     telephone: profile.contact.phoneE164,
     image: {
       "@type": "ImageObject",
-      url: absoluteUrl(siteConfig.images.portraitFallback),
-      contentUrl: absoluteUrl(siteConfig.images.portraitFallback),
+      url: absoluteUrl(siteConfig.images.portrait),
+      contentUrl: absoluteUrl(siteConfig.images.portrait),
       width: siteConfig.images.width,
       height: siteConfig.images.height,
       caption: siteConfig.images.alt,
@@ -131,7 +131,6 @@ export function buildProfilePageJsonLd(): JsonLdObject {
   };
 }
 
-/** Single @graph payload — preferred for linked entities. */
 export function buildJsonLdGraph() {
   return {
     "@context": "https://schema.org",

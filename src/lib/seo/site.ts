@@ -1,7 +1,6 @@
 import { profile } from "@/content/profile";
 
-/** ISO date for sitemap lastmod — bump when portfolio content changes. */
-export const CONTENT_UPDATED_AT = "2026-08-01";
+export const CONTENT_UPDATED_AT = "2026-09-18";
 
 export const siteConfig = {
   name: profile.name,
@@ -31,9 +30,8 @@ export const siteConfig = {
     "KMS Technology Talent Acquisition",
   ],
   images: {
-    portrait: "/images/_preview-cutout.png",
-    portraitFallback: "/images/trang-hero.jpg",
-    og: "/images/og-portrait.jpg",
+    portrait: "/images/portrait.png",
+    og: "/images/og.jpg",
     width: 1024,
     height: 1024,
     ogWidth: 1200,
@@ -41,7 +39,6 @@ export const siteConfig = {
     alt: `${profile.name} — HR Executive portrait`,
   },
   icons: {
-    svg: "/icons/mark.svg",
     favicon16: "/icons/favicon-16.png",
     favicon32: "/icons/favicon-32.png",
     apple: "/icons/apple-touch-icon.png",

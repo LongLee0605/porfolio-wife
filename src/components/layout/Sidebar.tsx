@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { AvatarBgAnimation } from "@/components/atoms/AvatarBgAnimation";
-import { TypeWriter } from "@/components/atoms/TypeWriter";
+import { AvatarBgAnimation } from "@/components/ui/AvatarBgAnimation";
+import { TypeWriter } from "@/components/ui/TypeWriter";
 import { profile } from "@/content/profile";
 import { handleHashNavigation } from "@/lib/scroll";
 import { siteConfig } from "@/lib/seo";
@@ -47,7 +47,6 @@ export function Sidebar() {
 
       <div className="relative z-10 mx-auto flex w-full max-w-xl flex-col items-center gap-3 px-4 py-6 text-center sm:gap-3.5 sm:px-6 sm:py-7 lg:max-w-none lg:h-full lg:justify-center lg:gap-3.5 lg:overflow-hidden lg:px-7 lg:py-6">
         <div className="relative z-10 flex w-full flex-col items-center gap-2.5 sm:gap-3">
-          {/* Mobile/tablet: compact avatar; desktop keeps large centered size */}
           <div className="relative flex h-36 w-36 shrink-0 items-center justify-center overflow-visible sm:h-40 sm:w-40 lg:h-52 lg:w-52">
             <AvatarBgAnimation className="absolute -inset-6 opacity-95 sm:-inset-7 lg:-inset-12" />
             <Image

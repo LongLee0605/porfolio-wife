@@ -7,10 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "optimize:portrait": "node scripts/optimize-portrait.js",
-    "process:portrait": "node scripts/process-portrait.js",
-    "cutout:portrait": "node scripts/cutout-portrait.js",
-    "generate:icons": "node scripts/generate-icons.js"
+    "generate:assets": "node scripts/generate-brand-assets.js"
   },
   "dependencies": {
     "clsx": "^2.1.1",

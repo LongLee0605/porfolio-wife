@@ -1,4 +1,4 @@
-import { FadeIn } from "@/components/atoms/FadeIn";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { profile } from "@/content/profile";
 import { cn } from "@/lib/utils";
 
