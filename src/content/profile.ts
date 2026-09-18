@@ -62,9 +62,8 @@ export const profile = {
     "I am a motivated and versatile HR professional, always eager to take on new challenges. With a passion for people and process excellence, I am dedicated to delivering high-quality hiring and employee experience results.",
   focusAreas: [
     "Talent Acquisition",
-    "Full-cycle Recruitment",
-    "Compensation & Benefits",
     "Employee Engagement",
+    "Compensation & Benefits",
     "Learning & Development",
     "HR Operations",
     "People Experience",
@@ -82,7 +81,7 @@ export const profile = {
     { id: "overview", label: "Overview", href: "#overview" },
     { id: "experience", label: "Experience", href: "#experience" },
     { id: "expertise", label: "Expertise", href: "#expertise" },
-    { id: "skills", label: "Skills", href: "#skills" },
+    { id: "skill", label: "Skill", href: "#skill" },
     { id: "contact", label: "Contact", href: "#contact" },
   ] as NavItem[],
   skillGroups: [
@@ -148,26 +147,18 @@ export const profile = {
     },
     {
       title: "HR Executive",
-      company: "Gleads VietNam",
+      company: "Gleads VietNam & BBCIncorp JSC",
       period: "June 2023 – Mar 2026",
       startDate: "2023-06",
       endDate: "2026-03",
       highlights: [
-        "Own end-to-end recruitment across Technology, Marketing, and HR–Accounting roles.",
+        "Own end-to-end recruitment across Technology, Marketing, and HR–Accounting roles for Gleads.",
+        "Recruit for Customer Service, Legal, and Accounting functions including international and consulting roles for BBCIncorp.",
         "Partner with hiring managers to clarify needs, source creatively, and deliver high-quality hires with speed.",
-        "Support employer branding and maintain pipeline integrity with data-driven stakeholder updates.",
-      ],
-    },
-    {
-      title: "HR Executive",
-      company: "BBCIncorp JSC",
-      period: "June 2023 – Mar 2026",
-      startDate: "2023-06",
-      endDate: "2026-03",
-      highlights: [
-        "Recruit for Customer Service, Legal, and Accounting functions including international and consulting roles.",
         "Manage onboarding/offboarding, labor contracts, and day-to-day HR operations with compliance focus.",
+        "Support employer branding and maintain pipeline integrity with data-driven stakeholder updates.",
         "Strengthen employee relations through feedback systems, engagement planning, and internal communications.",
+        "Cover multi-entity hiring across Technology, Marketing, Legal, Customer Service, HR, and Accounting domains.",
       ],
     },
     {
@@ -258,15 +249,14 @@ export const profile = {
       "Engagement & Culture: Organize employee engagement activities and company events, conduct surveys, and follow up on action plans to enhance employee experience.",
       "HR Operations & Compliance: Prepare HR reports and ensure compliance with labor regulations, employment contracts, employee records, and statutory requirements. Coordinate with relevant authorities on HR-related matters.",
     ],
-    gleads: [
+    gleadsBbc: [
       "Technology: Front-end, Back-end, DevOps, Network, QC, Business Analyst",
       "Marketing: Brand, Content, Account, Design (Graphic, UI/UX), SEO",
       "HR & Accounting: HR Executive, HR Admin, Accountant",
-    ],
-    bbc: [
       "Customer Service: Sales Executive, Sales Admin",
       "Legal: Legal Executive, Compliance Officer",
       "Accounting: International Accountant, Bookkeeping Leader, Accounting Consultant",
+      "Multi-entity HR support across Gleads VietNam and BBCIncorp JSC (parent–subsidiary)",
     ],
   },
 } as const;
@@ -275,10 +265,10 @@ export type Profile = typeof profile;
 
 export function getAboutHighlights(): AboutHighlight[] {
   return [
-    { label: "Engagement", value: "Employee Engagement" },
-    { label: "Experience", value: "3+ years HR" },
-    { label: "Core strength", value: "Full-cycle HR" },
-    { label: "Scope", value: "TA · C&B · L&D" },
+    { label: "Based in", value: profile.locationCity },
+    { label: "Experience", value: "4+ years HR" },
+    { label: "English", value: "TOEIC 905" },
+    { label: "Chinese", value: "HSK4" },
   ];
 }
 
@@ -292,28 +282,11 @@ export type OverviewRole = {
   period: string;
 };
 
-/** Compact current-role rows for Overview (parent/subsidiary companies merged when both current). */
+/** Compact current-role rows for Overview. */
 export function getOverviewRoles(): OverviewRole[] {
-  const current = getCurrentEmployers();
-  const mergedKeys = new Set(["Gleads VietNam", "BBCIncorp JSC"]);
-  const primary = current.filter((role) => !mergedKeys.has(role.company));
-  const group = current.filter((role) => mergedKeys.has(role.company));
-
-  const rows: OverviewRole[] = primary.map((role) => ({
+  return getCurrentEmployers().map((role) => ({
     company: role.company,
     title: role.title,
     period: role.period,
   }));
-
-  if (group.length) {
-    const title = group[0]?.title ?? "HR Executive";
-    const period = group[0]?.period ?? "";
-    rows.push({
-      company: "Gleads VietNam & BBCIncorp JSC",
-      title,
-      period,
-    });
-  }
-
-  return rows;
 }

@@ -17,8 +17,8 @@ export function Expertise() {
             How attention is invested across the HR spectrum
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/75 sm:text-lg">
-            A balanced mix across recruitment, compensation & benefits, learning,
-            engagement, and compliant HR operations.
+            Capability areas across the HR spectrum, then employer-specific
+            scopes at IMCD and Gleads &amp; BBCIncorp.
           </p>
         </header>
       </FadeIn>
@@ -74,25 +74,18 @@ export function Expertise() {
         ))}
       </div>
 
-      <div className="mt-4 grid items-stretch gap-4 md:grid-cols-2">
-        <FadeIn delay={0.05} className="h-full md:col-span-2">
+      <div className="mt-4 grid items-stretch gap-4 lg:grid-cols-2">
+        <FadeIn delay={0.05} className="h-full">
           <DomainBlock
-            title="IMCD work domains"
+            title="IMCD — current scope"
             items={[...profile.workDomains.imcd]}
             tone="accent"
           />
         </FadeIn>
-        <FadeIn delay={0.08} className="h-full">
+        <FadeIn delay={0.09} className="h-full">
           <DomainBlock
-            title="Gleads hiring domains"
-            items={[...profile.workDomains.gleads]}
-            tone="neutral"
-          />
-        </FadeIn>
-        <FadeIn delay={0.1} className="h-full">
-          <DomainBlock
-            title="BBCIncorp hiring domains"
-            items={[...profile.workDomains.bbc]}
+            title="Gleads & BBCIncorp — hiring domains"
+            items={[...profile.workDomains.gleadsBbc]}
             tone="neutral"
           />
         </FadeIn>

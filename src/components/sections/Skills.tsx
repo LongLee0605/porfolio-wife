@@ -7,7 +7,7 @@ export function Skills() {
   );
 
   return (
-    <section id="skills" className="section-shell text-left">
+    <section id="skill" className="section-shell text-left">
       <FadeIn>
         <header className="max-w-2xl">
           <p className="mb-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-blossom">
