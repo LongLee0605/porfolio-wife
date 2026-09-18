@@ -75,17 +75,24 @@ export function Expertise() {
       </div>
 
       <div className="mt-4 grid items-stretch gap-4 md:grid-cols-2">
-        <FadeIn delay={0.05} className="h-full">
+        <FadeIn delay={0.05} className="h-full md:col-span-2">
+          <DomainBlock
+            title="IMCD work domains"
+            items={[...profile.workDomains.imcd]}
+            tone="accent"
+          />
+        </FadeIn>
+        <FadeIn delay={0.08} className="h-full">
           <DomainBlock
             title="Gleads hiring domains"
-            items={[...profile.recruitmentDomains.gleads]}
-            tone="accent"
+            items={[...profile.workDomains.gleads]}
+            tone="neutral"
           />
         </FadeIn>
         <FadeIn delay={0.1} className="h-full">
           <DomainBlock
             title="BBCIncorp hiring domains"
-            items={[...profile.recruitmentDomains.bbc]}
+            items={[...profile.workDomains.bbc]}
             tone="neutral"
           />
         </FadeIn>

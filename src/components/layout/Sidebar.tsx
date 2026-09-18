@@ -9,29 +9,41 @@ import { handleHashNavigation } from "@/lib/scroll";
 import { siteConfig } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
+function getActiveSectionId(ids: string[]) {
+  const probe = Math.min(window.innerHeight * 0.28, 180);
+  let activeId = ids[0] ?? "overview";
+
+  for (const id of ids) {
+    const el = document.getElementById(id);
+    if (!el) continue;
+    const top = el.getBoundingClientRect().top;
+    if (top - probe <= 0) {
+      activeId = id;
+    }
+  }
+
+  return activeId;
+}
+
 export function Sidebar() {
   const [active, setActive] = useState(profile.nav[0]?.id ?? "overview");
 
   useEffect(() => {
     const ids = profile.nav.map((item) => item.id);
-    const elements = ids
-      .map((id) => document.getElementById(id))
-      .filter(Boolean) as HTMLElement[];
 
-    if (!elements.length) return;
+    const sync = () => {
+      setActive(getActiveSectionId(ids));
+    };
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-        if (visible[0]?.target.id) setActive(visible[0].target.id);
-      },
-      { rootMargin: "-20% 0px -55% 0px", threshold: [0.1, 0.35, 0.6] },
-    );
-
-    elements.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    sync();
+    window.addEventListener("scroll", sync, { passive: true });
+    window.addEventListener("resize", sync, { passive: true });
+    window.addEventListener("hashchange", sync);
+    return () => {
+      window.removeEventListener("scroll", sync);
+      window.removeEventListener("resize", sync);
+      window.removeEventListener("hashchange", sync);
+    };
   }, []);
 
   return (
@@ -88,8 +100,11 @@ export function Sidebar() {
               <a
                 key={item.id}
                 href={item.href}
-                onClick={(e) => handleHashNavigation(e, item.href)}
-                aria-current={isActive ? "true" : undefined}
+                onClick={(e) => {
+                  setActive(item.id);
+                  handleHashNavigation(e, item.href);
+                }}
+                aria-current={isActive ? "page" : undefined}
                 className={cn(
                   "rounded-full border px-3 py-1.5 text-sm font-semibold transition sm:px-3.5 sm:py-2 lg:rounded-lg lg:px-3 lg:py-1.5 lg:text-left lg:text-[0.95rem]",
                   isActive

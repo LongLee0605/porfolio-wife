@@ -133,24 +133,25 @@ export const profile = {
     {
       title: "HR Executive",
       company: "IMCD",
-      period: "Present",
-      startDate: "2025-01",
+      period: "Mar 2026 – Present",
+      startDate: "2026-03",
       highlights: [
-        "Manage the full recruitment lifecycle for corporate and frontline roles — sourcing, assessment, offer negotiation, onboarding, and post-joining follow-up.",
-        "Build and maintain talent pipelines through direct sourcing, recruitment platforms, professional networks, and agency partnerships.",
-        "Manage monthly payroll and attendance with data accuracy and statutory compliance; administer SI/HI/UI participation and status changes.",
-        "Handle PIT administration (dependent registration, tax documentation, employee inquiries) and deliver benefits per policy and employment contracts.",
-        "Run the employee health insurance program: vendor coordination, contract negotiation, enrollment, claims support, and ongoing operations.",
-        "Coordinate L&D — training needs assessments, annual plans, workshops/orientation, participation tracking, and management reporting.",
-        "Plan engagement and culture initiatives (Year-End Party, team building, CSR, surveys) and drive follow-up actions from employee feedback.",
-        "Prepare HR reports (headcount, turnover, attendance, movements) and ensure labor-law compliance across contracts, records, and statutory coordination.",
+        "Recruitment & TA: manage the full lifecycle for corporate and frontline roles — sourcing, assessment, offer, onboarding, and post-joining follow-up.",
+        "Build talent pipelines through direct sourcing, recruitment platforms, professional networks, and agency partnerships; manage onboarding/offboarding clearance.",
+        "C&B: manage monthly payroll and attendance with statutory compliance; administer SI/HI/UI increases, decreases, and status changes.",
+        "Handle PIT administration (dependents, documentation, inquiries) and deliver benefits per company policy and employment contracts.",
+        "Run the employee health insurance program — vendor coordination, contract negotiation, enrollment, claims support, and ongoing operations.",
+        "L&D: coordinate training needs assessments, annual plans, workshops/orientation, participation tracking, and management reports.",
+        "Engagement & culture: Year-End Party, team building, CSR, events, surveys, and follow-up actions that strengthen employee experience.",
+        "HR ops & compliance: headcount/turnover/attendance reporting, labor-law compliance, contracts, records, and statutory coordination with authorities.",
       ],
     },
     {
       title: "HR Executive",
       company: "Gleads VietNam",
-      period: "June 2023 – Present",
+      period: "June 2023 – Mar 2026",
       startDate: "2023-06",
+      endDate: "2026-03",
       highlights: [
         "Own end-to-end recruitment across Technology, Marketing, and HR–Accounting roles.",
         "Partner with hiring managers to clarify needs, source creatively, and deliver high-quality hires with speed.",
@@ -160,8 +161,9 @@ export const profile = {
     {
       title: "HR Executive",
       company: "BBCIncorp JSC",
-      period: "June 2023 – Present",
+      period: "June 2023 – Mar 2026",
       startDate: "2023-06",
+      endDate: "2026-03",
       highlights: [
         "Recruit for Customer Service, Legal, and Accounting functions including international and consulting roles.",
         "Manage onboarding/offboarding, labor contracts, and day-to-day HR operations with compliance focus.",
@@ -197,45 +199,45 @@ export const profile = {
       title: "Recruitment & Talent Acquisition",
       weight: "30%",
       points: [
-        "Full recruitment lifecycle for corporate and frontline roles — sourcing through onboarding and post-joining follow-up",
-        "Talent pipeline via direct sourcing, platforms, networks, and agency partners",
-        "Hiring manager partnership and multi-industry recruitment delivery",
+        "Full recruitment lifecycle for corporate and frontline positions — sourcing, assessment, offer, onboarding, and post-joining follow-up",
+        "Qualified talent pipeline via direct sourcing, platforms, professional networks, and agency partnerships",
+        "Onboarding and offboarding with timely documentation, system access, and employee clearance",
       ],
     },
     {
       title: "Compensation & Benefits",
       weight: "25%",
       points: [
-        "Monthly payroll and attendance with statutory compliance and timely processing",
-        "SI / HI / UI administration and personal income tax (PIT) support",
-        "Employee benefits, health insurance programs, vendor coordination, and claims support",
+        "Monthly payroll and attendance review with data accuracy, statutory compliance, and timely processing",
+        "SI / HI / UI administration and personal income tax (PIT) support including dependent registration",
+        "Employee benefits and health insurance program management — vendors, enrollment, claims, and operations",
       ],
     },
     {
       title: "Learning & Development",
       weight: "15%",
       points: [
-        "Training needs assessment and annual L&D plan support",
-        "Coordinate internal/external training, workshops, and orientation",
-        "Track participation and effectiveness; maintain records and management reports",
+        "Training needs assessments and support for annual L&D plan development and implementation",
+        "Coordinate internal/external training, workshops, orientation, and learning initiatives",
+        "Monitor participation and effectiveness; maintain training records and management reports",
       ],
     },
     {
       title: "Employee Engagement & Culture",
       weight: "15%",
       points: [
-        "Year-End Party, team building, CSR, events, and internal communications",
-        "Engagement surveys and follow-up action planning",
-        "Initiatives that strengthen culture and employee experience",
+        "Year-End Party, team building, CSR programs, employee events, and internal communications",
+        "Design and administer engagement surveys; coordinate follow-up actions from feedback",
+        "Initiatives that enhance employee experience and strengthen organizational culture",
       ],
     },
     {
       title: "HR Operations & Compliance",
       weight: "15%",
       points: [
-        "HR reporting: headcount, turnover, attendance, and workforce movements",
-        "Labor-law and policy compliance for contracts, records, and office regulations",
-        "Coordination with departments, authorities, and service providers on statutory HR matters",
+        "HR reports on headcount, turnover, attendance, and workforce movements for management decisions",
+        "Policies and documentation aligned with Vietnamese labor regulations and company policy",
+        "Employment contracts, personnel records, and coordination with authorities/service providers",
       ],
     },
   ] as ExpertiseArea[],
@@ -252,7 +254,14 @@ export const profile = {
     "Research & Writing",
     "Stakeholder Management",
   ],
-  recruitmentDomains: {
+  workDomains: {
+    imcd: [
+      "Recruitment & Talent Acquisition — full lifecycle for corporate and frontline roles; talent pipeline; onboarding & offboarding",
+      "Compensation & Benefits — payroll, attendance, SI/HI/UI, PIT, benefits entitlements, and employee health insurance programs",
+      "Learning & Development — needs assessment, annual L&D plans, training coordination, and effectiveness reporting",
+      "Employee Engagement & Culture — Year-End Party, team building, CSR, surveys, and culture-building initiatives",
+      "HR Operations & Compliance — HR metrics reporting, labor-law compliance, contracts, records, and statutory coordination",
+    ],
     gleads: [
       "Technology: Front-end, Back-end, DevOps, Network, QC, Business Analyst",
       "Marketing: Brand, Content, Account, Design (Graphic, UI/UX), SEO",
@@ -287,7 +296,7 @@ export type OverviewRole = {
   period: string;
 };
 
-/** Compact current-role rows for Overview (parent/subsidiary companies merged). */
+/** Compact current-role rows for Overview (parent/subsidiary companies merged when both current). */
 export function getOverviewRoles(): OverviewRole[] {
   const current = getCurrentEmployers();
   const mergedKeys = new Set(["Gleads VietNam", "BBCIncorp JSC"]);
