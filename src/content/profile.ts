@@ -57,16 +57,16 @@ export const profile = {
   locationCity: "Ho Chi Minh City",
   locationCountry: "VN",
   tagline:
-    "Building people-first workplaces through recruitment excellence, thoughtful HR operations, and meaningful employee experience.",
+    "Building people-first workplaces through recruitment excellence, effective HR operations, and meaningful employee experiences.",
   objective:
     "I am a motivated and versatile HR professional, always eager to take on new challenges. With a passion for people and process excellence, I am dedicated to delivering high-quality hiring and employee experience results.",
   focusAreas: [
     "Talent Acquisition",
     "Full-cycle Recruitment",
     "Compensation & Benefits",
-    "HR Operations",
-    "Learning & Development",
     "Employee Engagement",
+    "Learning & Development",
+    "HR Operations",
     "People Experience",
   ],
   contact: {
@@ -136,14 +136,14 @@ export const profile = {
       period: "Mar 2026 – Present",
       startDate: "2026-03",
       highlights: [
-        "Recruitment & TA: manage the full lifecycle for corporate and frontline roles — sourcing, assessment, offer, onboarding, and post-joining follow-up.",
-        "Build talent pipelines through direct sourcing, recruitment platforms, professional networks, and agency partnerships; manage onboarding/offboarding clearance.",
-        "C&B: manage monthly payroll and attendance with statutory compliance; administer SI/HI/UI increases, decreases, and status changes.",
-        "Handle PIT administration (dependents, documentation, inquiries) and deliver benefits per company policy and employment contracts.",
-        "Run the employee health insurance program — vendor coordination, contract negotiation, enrollment, claims support, and ongoing operations.",
-        "L&D: coordinate training needs assessments, annual plans, workshops/orientation, participation tracking, and management reports.",
-        "Engagement & culture: Year-End Party, team building, CSR, events, surveys, and follow-up actions that strengthen employee experience.",
-        "HR ops & compliance: headcount/turnover/attendance reporting, labor-law compliance, contracts, records, and statutory coordination with authorities.",
+        "Recruitment: Manage the full recruitment lifecycle for corporate and frontline roles, including sourcing, assessment, offer management, onboarding, and post-joining follow-up.",
+        "Build and maintain talent pipelines through direct sourcing, recruitment platforms, professional networks, and agency partnerships. Manage onboarding and offboarding processes and clearance.",
+        "C&B: Manage monthly payroll and attendance in compliance with statutory requirements. Administer SI/HI/UI increases, decreases, and status changes.",
+        "Handle PIT administration, including dependent registration, documentation, and employee inquiries, while ensuring benefits are delivered in accordance with company policies and employment contracts.",
+        "Manage the employee health insurance program, including vendor coordination, contract negotiation, enrollment, claims support, and ongoing administration.",
+        "L&D: Coordinate training needs assessments, annual training plans, workshops, orientations, participation tracking, and management reports.",
+        "Engagement & Culture: Organize employee engagement activities and company events, conduct surveys, and follow up on action plans to enhance employee experience.",
+        "HR Operations & Compliance: Prepare HR reports and ensure compliance with labor regulations, employment contracts, employee records, and statutory requirements. Coordinate with relevant authorities on HR-related matters.",
       ],
     },
     {
@@ -199,45 +199,38 @@ export const profile = {
       title: "Recruitment & Talent Acquisition",
       weight: "30%",
       points: [
-        "Full recruitment lifecycle for corporate and frontline positions — sourcing, assessment, offer, onboarding, and post-joining follow-up",
-        "Qualified talent pipeline via direct sourcing, platforms, professional networks, and agency partnerships",
-        "Onboarding and offboarding with timely documentation, system access, and employee clearance",
+        "Manage the full recruitment lifecycle for corporate and frontline roles, including sourcing, assessment, offer management, onboarding, and post-joining follow-up.",
+        "Build and maintain talent pipelines through direct sourcing, recruitment platforms, professional networks, and agency partnerships. Manage onboarding and offboarding processes and clearance.",
       ],
     },
     {
       title: "Compensation & Benefits",
       weight: "25%",
       points: [
-        "Monthly payroll and attendance review with data accuracy, statutory compliance, and timely processing",
-        "SI / HI / UI administration and personal income tax (PIT) support including dependent registration",
-        "Employee benefits and health insurance program management — vendors, enrollment, claims, and operations",
+        "Manage monthly payroll and attendance in compliance with statutory requirements. Administer SI/HI/UI increases, decreases, and status changes.",
+        "Handle PIT administration, including dependent registration, documentation, and employee inquiries, while ensuring benefits are delivered in accordance with company policies and employment contracts.",
+        "Manage the employee health insurance program, including vendor coordination, contract negotiation, enrollment, claims support, and ongoing administration.",
       ],
     },
     {
       title: "Learning & Development",
       weight: "15%",
       points: [
-        "Training needs assessments and support for annual L&D plan development and implementation",
-        "Coordinate internal/external training, workshops, orientation, and learning initiatives",
-        "Monitor participation and effectiveness; maintain training records and management reports",
+        "Coordinate training needs assessments, annual training plans, workshops, orientations, participation tracking, and management reports.",
       ],
     },
     {
       title: "Employee Engagement & Culture",
       weight: "15%",
       points: [
-        "Year-End Party, team building, CSR programs, employee events, and internal communications",
-        "Design and administer engagement surveys; coordinate follow-up actions from feedback",
-        "Initiatives that enhance employee experience and strengthen organizational culture",
+        "Organize employee engagement activities and company events, conduct surveys, and follow up on action plans to enhance employee experience.",
       ],
     },
     {
       title: "HR Operations & Compliance",
       weight: "15%",
       points: [
-        "HR reports on headcount, turnover, attendance, and workforce movements for management decisions",
-        "Policies and documentation aligned with Vietnamese labor regulations and company policy",
-        "Employment contracts, personnel records, and coordination with authorities/service providers",
+        "Prepare HR reports and ensure compliance with labor regulations, employment contracts, employee records, and statutory requirements. Coordinate with relevant authorities on HR-related matters.",
       ],
     },
   ] as ExpertiseArea[],
@@ -256,11 +249,14 @@ export const profile = {
   ],
   workDomains: {
     imcd: [
-      "Recruitment & Talent Acquisition — full lifecycle for corporate and frontline roles; talent pipeline; onboarding & offboarding",
-      "Compensation & Benefits — payroll, attendance, SI/HI/UI, PIT, benefits entitlements, and employee health insurance programs",
-      "Learning & Development — needs assessment, annual L&D plans, training coordination, and effectiveness reporting",
-      "Employee Engagement & Culture — Year-End Party, team building, CSR, surveys, and culture-building initiatives",
-      "HR Operations & Compliance — HR metrics reporting, labor-law compliance, contracts, records, and statutory coordination",
+      "Recruitment: Manage the full recruitment lifecycle for corporate and frontline roles, including sourcing, assessment, offer management, onboarding, and post-joining follow-up.",
+      "Build and maintain talent pipelines through direct sourcing, recruitment platforms, professional networks, and agency partnerships. Manage onboarding and offboarding processes and clearance.",
+      "C&B: Manage monthly payroll and attendance in compliance with statutory requirements. Administer SI/HI/UI increases, decreases, and status changes.",
+      "Handle PIT administration, including dependent registration, documentation, and employee inquiries, while ensuring benefits are delivered in accordance with company policies and employment contracts.",
+      "Manage the employee health insurance program, including vendor coordination, contract negotiation, enrollment, claims support, and ongoing administration.",
+      "L&D: Coordinate training needs assessments, annual training plans, workshops, orientations, participation tracking, and management reports.",
+      "Engagement & Culture: Organize employee engagement activities and company events, conduct surveys, and follow up on action plans to enhance employee experience.",
+      "HR Operations & Compliance: Prepare HR reports and ensure compliance with labor regulations, employment contracts, employee records, and statutory requirements. Coordinate with relevant authorities on HR-related matters.",
     ],
     gleads: [
       "Technology: Front-end, Back-end, DevOps, Network, QC, Business Analyst",
@@ -279,7 +275,7 @@ export type Profile = typeof profile;
 
 export function getAboutHighlights(): AboutHighlight[] {
   return [
-    { label: "Based in", value: profile.locationCity },
+    { label: "Engagement", value: "Employee Engagement" },
     { label: "Experience", value: "3+ years HR" },
     { label: "Core strength", value: "Full-cycle HR" },
     { label: "Scope", value: "TA · C&B · L&D" },
