@@ -1,6 +1,7 @@
 export {
   getAboutHighlights,
   getCurrentEmployers,
+  getOverviewRoles,
   profile,
   type AboutHighlight,
   type Certificate,
@@ -9,5 +10,6 @@ export {
   type ExpertiseArea,
   type Language,
   type NavItem,
+  type OverviewRole,
   type Profile,
 } from "@/content/profile";

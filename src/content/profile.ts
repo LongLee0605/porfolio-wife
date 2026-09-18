@@ -63,10 +63,10 @@ export const profile = {
   focusAreas: [
     "Talent Acquisition",
     "Full-cycle Recruitment",
+    "Compensation & Benefits",
     "HR Operations",
-    "Employee Relations",
     "Learning & Development",
-    "Employer Branding",
+    "Employee Engagement",
     "People Experience",
   ],
   contact: {
@@ -91,12 +91,16 @@ export const profile = {
       items: [
         "Recruitment",
         "Talent Acquisition",
-        "Onboarding",
-        "HR Operations",
-        "Employee Relations",
+        "Onboarding / Offboarding",
+        "Compensation & Benefits",
+        "Payroll & Attendance",
+        "Social / Health / Unemployment Insurance",
+        "Personal Income Tax (PIT)",
+        "Learning & Development",
+        "Employee Engagement",
+        "HR Operations & Compliance",
         "Labor Contracts",
-        "Employer Branding",
-        "L&D",
+        "HR Reporting",
       ],
     },
     {
@@ -105,11 +109,11 @@ export const profile = {
         "Microsoft Office",
         "Outlook",
         "Canva",
-        "Mailchimp",
         "Leadership",
         "Communication",
         "Presentation",
         "Research & Writing",
+        "Stakeholder Management",
       ],
     },
   ],
@@ -126,6 +130,22 @@ export const profile = {
     { name: "Chinese", detail: "HSK4 (2025)", highlight: "HSK4" },
   ] satisfies Language[],
   experiences: [
+    {
+      title: "HR Executive",
+      company: "IMCD",
+      period: "Present",
+      startDate: "2025-01",
+      highlights: [
+        "Manage the full recruitment lifecycle for corporate and frontline roles — sourcing, assessment, offer negotiation, onboarding, and post-joining follow-up.",
+        "Build and maintain talent pipelines through direct sourcing, recruitment platforms, professional networks, and agency partnerships.",
+        "Manage monthly payroll and attendance with data accuracy and statutory compliance; administer SI/HI/UI participation and status changes.",
+        "Handle PIT administration (dependent registration, tax documentation, employee inquiries) and deliver benefits per policy and employment contracts.",
+        "Run the employee health insurance program: vendor coordination, contract negotiation, enrollment, claims support, and ongoing operations.",
+        "Coordinate L&D — training needs assessments, annual plans, workshops/orientation, participation tracking, and management reporting.",
+        "Plan engagement and culture initiatives (Year-End Party, team building, CSR, surveys) and drive follow-up actions from employee feedback.",
+        "Prepare HR reports (headcount, turnover, attendance, movements) and ensure labor-law compliance across contracts, records, and statutory coordination.",
+      ],
+    },
     {
       title: "HR Executive",
       company: "Gleads VietNam",
@@ -175,57 +195,47 @@ export const profile = {
   expertise: [
     {
       title: "Recruitment & Talent Acquisition",
-      weight: "50–60%",
+      weight: "30%",
       points: [
-        "Full recruitment cycle from JD creation to offer, onboarding, and post-hire follow-up",
-        "Multi-channel sourcing and creative hiring approaches to hit headcount targets",
-        "Hiring manager partnership, pipeline hygiene, and employer branding support",
+        "Full recruitment lifecycle for corporate and frontline roles — sourcing through onboarding and post-joining follow-up",
+        "Talent pipeline via direct sourcing, platforms, networks, and agency partners",
+        "Hiring manager partnership and multi-industry recruitment delivery",
       ],
     },
     {
-      title: "Onboarding / Offboarding",
-      weight: "10%",
+      title: "Compensation & Benefits",
+      weight: "25%",
       points: [
-        "End-to-end paperwork, orientation, and exit interviews",
-      ],
-    },
-    {
-      title: "HR Operations",
-      weight: "10%",
-      points: [
-        "Labor contract lifecycle: draft, renew, terminate, and monitor expiry",
-        "Contract addenda for salary, title, term, and other conditions",
-        "Employee records and labor-law compliance",
-      ],
-    },
-    {
-      title: "Employee Relations",
-      weight: "10%",
-      points: [
-        "Improve relationships, morale, productivity, and retention with management and employees",
-        "Handle inquiries and concerns promptly; establish Employee Feedback Form",
-      ],
-    },
-    {
-      title: "HR Policy & Process",
-      weight: "10%",
-      points: [
-        "Employee data, reporting, and engagement planning",
-        "Company handbook, process improvements, templates, and culture documentation",
+        "Monthly payroll and attendance with statutory compliance and timely processing",
+        "SI / HI / UI administration and personal income tax (PIT) support",
+        "Employee benefits, health insurance programs, vendor coordination, and claims support",
       ],
     },
     {
       title: "Learning & Development",
-      weight: "5%",
+      weight: "15%",
       points: [
-        "Training needs assessment, new-hire orientation, and High-Potential Employee Program",
+        "Training needs assessment and annual L&D plan support",
+        "Coordinate internal/external training, workshops, and orientation",
+        "Track participation and effectiveness; maintain records and management reports",
       ],
     },
     {
-      title: "Engagement & Internal Communications",
-      weight: "5%",
+      title: "Employee Engagement & Culture",
+      weight: "15%",
       points: [
-        "Company trips, year-end celebrations, holidays, and internal event support",
+        "Year-End Party, team building, CSR, events, and internal communications",
+        "Engagement surveys and follow-up action planning",
+        "Initiatives that strengthen culture and employee experience",
+      ],
+    },
+    {
+      title: "HR Operations & Compliance",
+      weight: "15%",
+      points: [
+        "HR reporting: headcount, turnover, attendance, and workforce movements",
+        "Labor-law and policy compliance for contracts, records, and office regulations",
+        "Coordination with departments, authorities, and service providers on statutory HR matters",
       ],
     },
   ] as ExpertiseArea[],
@@ -235,17 +245,12 @@ export const profile = {
     { name: "IELTS", year: "2019", note: "Expired" },
     { name: "IC3 Digital Literacy Certification GS5" },
   ] as Certificate[],
-  tools: [
-    "Microsoft Office",
-    "Outlook",
-    "Canva",
-    "Mailchimp",
-    "Mailmerge",
-  ],
+  tools: ["Microsoft Office", "Outlook", "Canva"],
   softSkills: [
     "Leadership",
     "Communication & Presentation",
     "Research & Writing",
+    "Stakeholder Management",
   ],
   recruitmentDomains: {
     gleads: [
@@ -267,11 +272,43 @@ export function getAboutHighlights(): AboutHighlight[] {
   return [
     { label: "Based in", value: profile.locationCity },
     { label: "Experience", value: "3+ years HR" },
-    { label: "Core strength", value: "Full-cycle hiring" },
-    { label: "Industries", value: "Tech · Legal · MKT" },
+    { label: "Core strength", value: "Full-cycle HR" },
+    { label: "Scope", value: "TA · C&B · L&D" },
   ];
 }
 
 export function getCurrentEmployers() {
   return profile.experiences.filter((role) => !role.endDate);
+}
+
+export type OverviewRole = {
+  company: string;
+  title: string;
+  period: string;
+};
+
+/** Compact current-role rows for Overview (parent/subsidiary companies merged). */
+export function getOverviewRoles(): OverviewRole[] {
+  const current = getCurrentEmployers();
+  const mergedKeys = new Set(["Gleads VietNam", "BBCIncorp JSC"]);
+  const primary = current.filter((role) => !mergedKeys.has(role.company));
+  const group = current.filter((role) => mergedKeys.has(role.company));
+
+  const rows: OverviewRole[] = primary.map((role) => ({
+    company: role.company,
+    title: role.title,
+    period: role.period,
+  }));
+
+  if (group.length) {
+    const title = group[0]?.title ?? "HR Executive";
+    const period = group[0]?.period ?? "";
+    rows.push({
+      company: "Gleads VietNam & BBCIncorp JSC",
+      title,
+      period,
+    });
+  }
+
+  return rows;
 }

@@ -17,14 +17,14 @@ export function Expertise() {
             How attention is invested across the HR spectrum
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/75 sm:text-lg">
-            A practical mix weighted toward recruitment, backed by solid
-            operations, relations, and culture work.
+            A balanced mix across recruitment, compensation & benefits, learning,
+            engagement, and compliant HR operations.
           </p>
         </header>
       </FadeIn>
 
-      <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        <FadeIn className="md:col-span-2 md:row-span-2" y={20}>
+      <div className="mt-10 grid items-stretch gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <FadeIn className="h-full md:col-span-2 md:row-span-2" y={20}>
           <article className="card-glow card-glow-hover flex h-full flex-col rounded-2xl bg-accent/25 p-6 md:p-8">
             <div className="mb-5 flex flex-wrap items-center gap-3">
               <h3 className="text-xl font-bold text-white sm:text-2xl">
@@ -46,7 +46,12 @@ export function Expertise() {
         </FadeIn>
 
         {rest.map((area, i) => (
-          <FadeIn key={area.title} delay={0.06 + i * 0.04} y={20}>
+          <FadeIn
+            key={area.title}
+            delay={0.06 + i * 0.04}
+            y={20}
+            className="h-full"
+          >
             <article className="card-glow card-glow-hover flex h-full flex-col rounded-2xl p-5 sm:p-6">
               <div className="mb-4 flex flex-wrap items-center gap-2">
                 <h3 className="text-base font-bold text-white sm:text-lg">
@@ -56,7 +61,7 @@ export function Expertise() {
                   {area.weight}
                 </span>
               </div>
-              <ul className="space-y-2.5 text-sm text-white/70">
+              <ul className="mt-auto space-y-2.5 text-sm text-white/70">
                 {area.points.map((point) => (
                   <li key={point} className="flex gap-2.5">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-warm" />
@@ -69,15 +74,15 @@ export function Expertise() {
         ))}
       </div>
 
-      <div className="mt-4 grid gap-4 md:grid-cols-2">
-        <FadeIn delay={0.05}>
+      <div className="mt-4 grid items-stretch gap-4 md:grid-cols-2">
+        <FadeIn delay={0.05} className="h-full">
           <DomainBlock
             title="Gleads hiring domains"
             items={[...profile.recruitmentDomains.gleads]}
             tone="accent"
           />
         </FadeIn>
-        <FadeIn delay={0.1}>
+        <FadeIn delay={0.1} className="h-full">
           <DomainBlock
             title="BBCIncorp hiring domains"
             items={[...profile.recruitmentDomains.bbc]}
@@ -101,18 +106,18 @@ function DomainBlock({
   return (
     <div
       className={cn(
-        "card-glow card-glow-hover rounded-2xl p-5 sm:p-6",
+        "card-glow card-glow-hover flex h-full min-h-full flex-col rounded-2xl p-5 sm:p-6",
         tone === "accent" ? "bg-accent/20" : "bg-white/5",
       )}
     >
       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-blossom">
         {title}
       </p>
-      <ul className="space-y-2 text-sm text-white/70">
+      <ul className="flex flex-1 flex-col justify-start space-y-2 text-sm text-white/70">
         {items.map((item) => (
           <li key={item} className="flex gap-2">
             <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-blossom/80" />
-            {item}
+            <span className="min-w-0 leading-relaxed">{item}</span>
           </li>
         ))}
       </ul>

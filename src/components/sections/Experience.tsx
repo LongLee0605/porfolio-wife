@@ -45,8 +45,8 @@ export function Experience() {
         </p>
         <h2 className="text-3xl font-bold sm:text-4xl">Experience</h2>
         <p className="mx-auto mt-3 max-w-2xl text-base font-medium text-white/80 sm:text-lg">
-          HR and Talent Acquisition experience across technology, corporate
-          services, and campus hiring.
+          HR experience spanning talent acquisition, compensation & benefits,
+          L&D, engagement, and operations across corporate environments.
         </p>
       </FadeIn>
 

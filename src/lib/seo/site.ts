@@ -10,7 +10,7 @@ export const siteConfig = {
   username: profile.username,
   title: `${profile.name} | HR Executive & Talent Acquisition`,
   description:
-    "Van Thien Doan Trang — HR Executive in Ho Chi Minh City specializing in full-cycle recruitment, HR operations, employee relations, and people experience.",
+    "Van Thien Doan Trang — HR Executive in Ho Chi Minh City specializing in full-cycle recruitment, compensation & benefits, L&D, employee engagement, and HR operations.",
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://vanthiendoantrang.vercel.app").replace(
     /\/$/,
     "",
@@ -22,9 +22,11 @@ export const siteConfig = {
     profile.shortName,
     "HR Executive Vietnam",
     "Talent Acquisition Ho Chi Minh City",
+    "Compensation and Benefits Vietnam",
     "Human Resources Executive",
     ...profile.focusAreas,
     "UEH Human Resource Management",
+    "IMCD HR",
     "Gleads VietNam HR",
     "BBCIncorp HR",
     "KMS Technology Talent Acquisition",

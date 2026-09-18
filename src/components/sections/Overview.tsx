@@ -1,13 +1,13 @@
 import {
   profile,
   getAboutHighlights,
-  getCurrentEmployers,
+  getOverviewRoles,
 } from "@/content/profile";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 export function Overview() {
   const highlights = getAboutHighlights();
-  const employers = getCurrentEmployers();
+  const roles = getOverviewRoles();
   const focusPreview = profile.focusAreas.slice(0, 5);
 
   return (
@@ -44,32 +44,37 @@ export function Overview() {
             ))}
           </div>
 
-          <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-5">
-            <div className="card-glow min-w-0 rounded-2xl p-5 text-left sm:p-6">
+          <div className="mt-4 grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 lg:gap-5">
+            <div className="card-glow flex h-full min-w-0 flex-col rounded-2xl p-5 text-left sm:p-6">
               <p className="text-[11px] font-semibold uppercase tracking-wider text-blossom">
                 Education
               </p>
-              <p className="mt-2 text-base font-bold leading-snug sm:text-lg">
+              <p className="mt-3 text-base font-bold leading-snug sm:text-lg">
                 {profile.education.degree}
               </p>
-              <p className="mt-1.5 text-sm text-white/70">
+              <p className="mt-2 text-sm leading-relaxed text-white/70">
                 {profile.education.school}
               </p>
-              <p className="mt-0.5 text-sm text-white/50">
+              <p className="mt-auto pt-3 text-sm text-white/50">
                 {profile.education.period} · {profile.education.gpa}
               </p>
             </div>
 
-            <div className="card-glow min-w-0 rounded-2xl p-5 text-left sm:p-6">
+            <div className="card-glow flex h-full min-w-0 flex-col rounded-2xl p-5 text-left sm:p-6">
               <p className="text-[11px] font-semibold uppercase tracking-wider text-blossom">
                 Current roles
               </p>
-              <ul className="mt-3 space-y-3">
-                {employers.map((role) => (
-                  <li key={`${role.company}-${role.title}`}>
-                    <p className="font-semibold text-white">{role.company}</p>
-                    <p className="text-sm text-white/70">{role.title}</p>
-                    <p className="text-sm text-white/55">{role.period}</p>
+              <ul className="mt-3 flex flex-1 flex-col justify-center gap-4">
+                {roles.map((role) => (
+                  <li key={role.company} className="min-w-0">
+                    <p className="font-semibold leading-snug text-white">
+                      {role.company}
+                    </p>
+                    <p className="mt-0.5 text-sm text-white/65">
+                      {role.title}
+                      <span className="text-white/35"> · </span>
+                      <span className="text-white/50">{role.period}</span>
+                    </p>
                   </li>
                 ))}
               </ul>
